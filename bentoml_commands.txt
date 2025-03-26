@@ -1,0 +1,49 @@
+# clone le projet
+> git clone https://github.com/Simon221/examen_bentoml.git
+
+# Creation du fichier prepare_data.py et train.py
+
+# Lanceent des commandes prepare and train
+> python src/prepare_data.py
+> python src/train_model.py
+
+# list des models dans le bentoStore
+    > bentoml models list
+# pour supprimer un model
+    > bentoml models delete TAG
+
+# Creation du fichier service.py
+
+# Lancement du service
+> bentoml serve service:rf_service --reload
+
+# Creation du fichier test_api.py
+# Lancement du fichier de test_api
+> python src/test_api.py
+
+# Creation du bento
+    # Creation du fichier bentofile.yaml
+    # Creation du fichier Dockerfile.template
+    # Creation du bento
+        > bentoml build
+    # Liste des bento 
+        > bentoml list
+    # pour supprimer un bento
+        > bentoml delete TAG
+
+# Pour conteneriser le bento
+> bentoml containerize simonpierrediouf_rf_admissions_service:latest
+
+# Pour verifier si l'image est bien créée
+> docker images 
+
+# Pour lancer l'image
+> docker run --rm -p 3000:3000 simonpierrediouf_rf_admissions_service:fnucyjqkqk5ula6j
+
+# Pour enregistrer l'image et créer un tar
+> docker save -o bento_image.tar simonpierrediouf_rf_admissions_service
+
+# Creation du fichier test_unitaire.py
+
+# Lancement du test unitaire
+> pytest src/test_unitaire.py -v
