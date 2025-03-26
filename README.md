@@ -10,6 +10,7 @@ Vous pouvez executer le projet en suivant les etapes suivantes
 
 ## Etape 1: Décompresser l'archive du projet
 Si vous avez reçu l'archive du Projet (examen_BentoML_SimonPierreDIOUF.zip), vous devez d'abord la decompresser.
+
 ``` unzip examen_BentoML_SimonPierreDIOUF.zip ```
 
 Vous trouverez alors
@@ -26,10 +27,12 @@ Vous trouverez alors
 ## Etape 4 : Test du bon fonctionnement 
 Pour cela vous pourrer utiliser le fichier test_api.py.
 Ouvrez un autre terminal et lancer la commande suivante
+
 ``` python test_api.py ```
 
 # Etape 5 : Lancer les tests unitaires
 Tous les tests unitaires ont été regroupés dans le fichier test_unitaire.py.
 Pour le lancer, ouvrez un terminal et executer la commande suivante
+
 ``` python test_unitaire.py -v ```
 
